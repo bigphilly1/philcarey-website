@@ -23,11 +23,13 @@ export default function Home() {
                 Sydney, Australia
               </p>
 
-              <h1 className="font-serif font-bold text-charcoal mb-8 leading-none"
+              <h1 className="font-serif mb-8 leading-none"
                 style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}>
-                Phil Carey<br />
                 <span className="italic font-normal text-charcoal-mid">
                   makes things.
+                </span><br />
+                <span className="font-bold text-charcoal">
+                  Phil Carey
                 </span>
               </h1>
 
