@@ -15,10 +15,10 @@ export default function Home() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="min-h-screen flex flex-col justify-center pt-16">
         <div className="max-w-wide mx-auto px-6 md:px-12 w-full">
-          <div className="grid md:grid-cols-12 gap-8 items-end py-20 md:py-28">
+          <div className="grid md:grid-cols-12 gap-8 items-start py-12 md:py-16">
 
             {/* Left: subheadline + quote + buttons */}
-            <div className="md:col-span-7 flex flex-col justify-end">
+            <div className="md:col-span-7 flex flex-col justify-start">
               <p className="font-sans text-lg md:text-xl text-charcoal-mid leading-relaxed max-w-prose mb-8">
                 Videos, AI tools, books, ideas. He is the author of{" "}
                 <em className="font-serif">The Curiosity Advantage</em>, Creative
