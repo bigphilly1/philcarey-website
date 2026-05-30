@@ -19,7 +19,7 @@ const config: Config = {
         "rule-line": "#D9D2C7",
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        serif: ["'Zilla Slab'", "Georgia", "serif"],
         sans: ["var(--font-lato)", "system-ui", "sans-serif"],
         slab: ["'Zilla Slab'", "Georgia", "serif"],
       },

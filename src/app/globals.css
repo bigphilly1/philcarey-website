@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-playfair: 'Zilla Slab', Georgia, serif;
   --font-lato: 'Lato', system-ui, sans-serif;
 }
 
