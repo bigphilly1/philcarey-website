@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -43,21 +44,16 @@ export default function Book() {
           {/* Cover */}
           <div className="md:col-span-4">
             <div
-              className="w-full bg-charcoal flex flex-col justify-between p-8"
+              className="w-full relative shadow-2xl"
               style={{ aspectRatio: "3/4", maxWidth: "320px" }}
             >
-              <div />
-              <div>
-                <p className="font-sans text-cream/60 text-xs uppercase tracking-widest mb-4">
-                  Phil Carey
-                </p>
-                <p className="font-serif text-cream font-black text-2xl leading-tight mb-2">
-                  The Curiosity Advantage
-                </p>
-                <p className="font-sans text-cream/70 text-xs leading-relaxed">
-                  How Better Questions Create Better Futures in the Age of AI
-                </p>
-              </div>
+              <Image
+                src="/book-cover.jpg"
+                alt="The Curiosity Advantage by Phil Carey — book cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 320px"
+              />
             </div>
 
             {/* Buy links */}
@@ -66,9 +62,8 @@ export default function Book() {
                 Where to buy
               </p>
               {[
-                { label: "Amazon Australia", href: "#" },
-                { label: "Booktopia", href: "#" },
-                { label: "Amazon (International)", href: "#" },
+                { label: "Buy the eBook", href: "https://buy.stripe.com/eVq8wPgG86wS1Ri4pW7N607" },
+                { label: "Buy the Audiobook", href: "https://buy.stripe.com/00wfZhahK6wS2Vm1dK7N608" },
               ].map((link) => (
                 <a
                   key={link.label}

@@ -6,7 +6,7 @@ const personSchema = {
   "@type": "Person",
   name: "Phil Carey",
   url: "https://philcarey.com",
-  sameAs: ["https://www.linkedin.com/in/philcarey"],
+  sameAs: ["https://www.linkedin.com/in/phil-carey/"],
   jobTitle: [
     "AI Consultant and Strategist",
     "Author",
@@ -73,7 +73,7 @@ export default function Footer() {
 
           <div className="flex items-center gap-6">
             <a
-              href="https://www.linkedin.com/in/philcarey"
+              href="https://www.linkedin.com/in/phil-carey/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-sans text-sm text-charcoal-light hover:text-terracotta transition-colors"

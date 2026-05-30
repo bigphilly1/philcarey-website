@@ -98,12 +98,12 @@ export default function Contact() {
                   LinkedIn
                 </p>
                 <a
-                  href="https://www.linkedin.com/in/philcarey"
+                  href="https://www.linkedin.com/in/phil-carey/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-sans text-sm text-terracotta hover:text-terracotta-dark transition-colors"
                 >
-                  linkedin.com/in/philcarey
+                  linkedin.com/in/phil-carey/
                 </a>
               </div>
             </div>

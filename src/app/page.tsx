@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function Home() {
                 Sydney, Australia
               </p>
 
-              <h1 className="font-serif font-black text-charcoal mb-8 leading-none"
+              <h1 className="font-serif font-bold text-charcoal mb-8 leading-none"
                 style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}>
                 Phil Carey<br />
                 <span className="italic font-normal text-charcoal-mid">
@@ -134,19 +135,18 @@ export default function Home() {
           <div className="grid md:grid-cols-12 gap-x-8 gap-y-10 items-center">
 
             <div className="md:col-span-5">
-              {/* Book cover placeholder */}
+              {/* Book cover */}
               <div
-                className="w-full aspect-[3/4] bg-charcoal flex items-end p-8"
+                className="w-full relative aspect-[3/4] shadow-2xl"
                 style={{ maxWidth: "320px" }}
               >
-                <div>
-                  <p className="font-serif text-cream text-2xl font-bold leading-tight mb-2">
-                    The Curiosity Advantage
-                  </p>
-                  <p className="font-sans text-cream/70 text-sm">
-                    Phil Carey
-                  </p>
-                </div>
+                <Image
+                  src="/book-cover.jpg"
+                  alt="The Curiosity Advantage by Phil Carey"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 320px"
+                />
               </div>
             </div>
 

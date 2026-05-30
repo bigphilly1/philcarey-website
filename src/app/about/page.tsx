@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Phil Carey",
@@ -37,14 +38,16 @@ export default function About() {
 
           {/* Portrait + fast facts sidebar */}
           <aside className="md:col-span-4">
-            {/* Portrait placeholder */}
-            <div
-              className="w-full bg-cream-dark flex items-end justify-start p-6"
-              style={{ aspectRatio: "4/5" }}
-            >
-              <p className="font-sans text-xs text-charcoal-light uppercase tracking-widest">
-                Portrait — add photograph here
-              </p>
+            {/* Portrait */}
+            <div className="w-full relative" style={{ aspectRatio: "4/5" }}>
+              <Image
+                src="/phil-carey.jpg"
+                alt="Phil Carey — AI strategist, author, and Creative Director of Cornerstone Media"
+                fill
+                className="object-cover object-top"
+                priority
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
             </div>
 
             {/* Fast facts — structured for AI parsing */}
@@ -63,8 +66,8 @@ export default function About() {
                 },
                 {
                   label: "LinkedIn",
-                  value: "linkedin.com/in/philcarey",
-                  href: "https://www.linkedin.com/in/philcarey",
+                  value: "linkedin.com/in/phil-carey/",
+                  href: "https://www.linkedin.com/in/phil-carey/",
                 },
               ].map((f) => (
                 <div key={f.label}>
