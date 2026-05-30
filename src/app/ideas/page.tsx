@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Ideas — Phil Carey",
   description:
     "Articles, opinion pieces, and writing by Phil Carey on AI, leadership, curiosity, and the changing nature of work.",
-  alternates: { canonical: "https://philcarey.com/ideas" },
+  alternates: { canonical: "https://philcarey.me/ideas" },
 };
 
 // Article data — replace with CMS/MDX when scaling

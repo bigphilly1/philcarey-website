@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "About Phil Carey",
   description:
     "Phil Carey is an Australian AI consultant, strategist, and author based in Sydney. Creative Director of Cornerstone Media, COO of Sophie Scott Health, and author of The Curiosity Advantage.",
-  alternates: { canonical: "https://philcarey.com/about" },
+  alternates: { canonical: "https://philcarey.me/about" },
 };
 
 export default function About() {

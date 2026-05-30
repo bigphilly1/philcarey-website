@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   },
   description:
     "Phil Carey is an Australian AI strategist, author of The Curiosity Advantage, Creative Director of Cornerstone Media, and corporate media producer. Based in Sydney.",
-  metadataBase: new URL("https://philcarey.com"),
+  metadataBase: new URL("https://philcarey.me"),
   openGraph: {
     type: "website",
     locale: "en_AU",
-    url: "https://philcarey.com",
+    url: "https://philcarey.me",
     siteName: "Phil Carey",
     title: "Phil Carey — AI Strategist, Author, Corporate Media Producer",
     description:
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://philcarey.com",
+    canonical: "https://philcarey.me",
   },
 };
 

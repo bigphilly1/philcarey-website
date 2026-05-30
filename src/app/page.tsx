@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Phil Carey — AI Strategist, Author, Corporate Media Producer",
   description:
     "Phil Carey makes things. Videos, tools, books, ideas. AI strategist, author of The Curiosity Advantage, and Creative Director of Cornerstone Media. Based in Sydney, Australia.",
-  alternates: { canonical: "https://philcarey.com" },
+  alternates: { canonical: "https://philcarey.me" },
 };
 
 export default function Home() {

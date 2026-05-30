@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "The Curiosity Advantage — Phil Carey",
   description:
     "The Curiosity Advantage: How Better Questions Create Better Futures in the Age of AI, by Phil Carey. A book about the psychology of working with AI as a thinking partner. Better questions produce better futures.",
-  alternates: { canonical: "https://philcarey.com/book" },
+  alternates: { canonical: "https://philcarey.me/book" },
 };
 
 export default function Book() {

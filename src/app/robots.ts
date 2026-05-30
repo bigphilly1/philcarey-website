@@ -15,6 +15,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Amazonbot", allow: "/" },
       { userAgent: "anthropic-ai", allow: "/" },
     ],
-    sitemap: "https://philcarey.com/sitemap.xml",
+    sitemap: "https://philcarey.me/sitemap.xml",
   };
 }

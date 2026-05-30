@@ -5,7 +5,7 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Phil Carey",
-  url: "https://philcarey.com",
+  url: "https://philcarey.me",
   sameAs: ["https://www.linkedin.com/in/phil-carey/"],
   jobTitle: [
     "AI Consultant and Strategist",

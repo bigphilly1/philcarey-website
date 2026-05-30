@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Work — Phil Carey",
   description:
     "Phil Carey offers AI strategy and consulting, corporate video production through Cornerstone Media, and bespoke AI tool design and build. Based in Sydney, Australia.",
-  alternates: { canonical: "https://philcarey.com/work" },
+  alternates: { canonical: "https://philcarey.me/work" },
 };
 
 export default function Work() {
