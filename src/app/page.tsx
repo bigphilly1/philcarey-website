@@ -58,7 +58,7 @@ export default function Home() {
               </div>
 
               {/* Name + tagline under image */}
-              <h1 className="font-serif leading-snug text-xl md:text-2xl">
+              <h1 className="font-serif leading-snug" style={{ fontSize: "50pt" }}>
                 <span className="font-bold text-charcoal block">
                   Phil Carey
                 </span>
