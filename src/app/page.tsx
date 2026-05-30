@@ -17,23 +17,21 @@ export default function Home() {
         <div className="max-w-wide mx-auto px-6 md:px-12 w-full">
           <div className="grid md:grid-cols-12 gap-8 items-start py-12 md:py-16">
 
-            {/* Left: subheadline + quote + buttons */}
+            {/* Left: headline + subheadline + buttons */}
             <div className="md:col-span-7 flex flex-col justify-start">
-              <p className="font-sans text-lg md:text-xl text-charcoal-mid leading-relaxed max-w-prose mb-8">
+              <h1 className="font-serif font-bold text-charcoal leading-tight mb-8"
+                style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
+                &ldquo;Amazing doors open when human and computer work
+                together.&rdquo;
+              </h1>
+
+              <p className="font-sans text-lg md:text-xl text-charcoal-mid leading-relaxed max-w-prose mb-10">
                 Videos, AI tools, books, ideas. He is the author of{" "}
                 <em className="font-serif">The Curiosity Advantage</em>, Creative
                 Director of Cornerstone Media, and an independent AI consultant
                 working with leaders across Australia. The craft behind the
                 thinking has been more than thirty years in the making.
               </p>
-
-              {/* Pull quote — Zilla Slab */}
-              <div className="accent-pull mb-10">
-                <p className="font-slab italic text-xl md:text-2xl text-charcoal leading-snug">
-                  &ldquo;Amazing doors open when human and computer work
-                  together.&rdquo;
-                </p>
-              </div>
 
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -102,7 +100,7 @@ export default function Home() {
                 {
                   title: "AI Strategy",
                   body:
-                    "Helping organisations think more clearly about artificial intelligence. Not faster. Better. The questions they should be asking, the risks they are not seeing, the decisions they need to make.",
+                    "Helping organisations think more clearly about artificial intelligence, and building the tools to prove it. Phil does not just advise on AI. He builds with it, designing bespoke solutions at the intersection of communication and process.",
                   href: "/work",
                 },
                 {

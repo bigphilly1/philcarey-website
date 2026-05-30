@@ -73,14 +73,50 @@ export default function Work() {
           </div>
         </section>
 
-        {/* Cornerstone Media */}
+        {/* AI Tool Design */}
         <section
-          id="cornerstone"
+          id="ai-tools"
           className="grid md:grid-cols-12 gap-x-8 gap-y-8 py-16 border-b border-rule-line"
         >
           <div className="md:col-span-3">
             <p className="font-sans text-xs uppercase tracking-widest text-terracotta">
               02
+            </p>
+          </div>
+          <div className="md:col-span-7">
+            <h2 className="font-serif font-bold text-charcoal mb-6"
+              style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}>
+              AI Tool Design and Build
+            </h2>
+            <div className="prose-phil">
+              <p>
+                Phil builds custom AI tools for specific client problems. This
+                is the part of the work that keeps the consulting honest. He
+                does not just advise on AI. He builds with it.
+              </p>
+              <p>
+                The tools he designs tend to sit at the intersection of
+                communication and process: things that help organisations
+                gather better information, make clearer decisions, or get
+                complex thinking in front of the people who need it faster.
+              </p>
+              <p>
+                If you have a problem that might benefit from a bespoke AI
+                solution, the conversation starts the same way all his best
+                work does. With a question worth asking.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Cornerstone Media */}
+        <section
+          id="cornerstone"
+          className="grid md:grid-cols-12 gap-x-8 gap-y-8 py-16"
+        >
+          <div className="md:col-span-3">
+            <p className="font-sans text-xs uppercase tracking-widest text-terracotta">
+              03
             </p>
           </div>
           <div className="md:col-span-7">
@@ -117,42 +153,6 @@ export default function Work() {
             >
               cornerstonemedia.com.au &rarr;
             </a>
-          </div>
-        </section>
-
-        {/* AI Tool Design */}
-        <section
-          id="ai-tools"
-          className="grid md:grid-cols-12 gap-x-8 gap-y-8 py-16"
-        >
-          <div className="md:col-span-3">
-            <p className="font-sans text-xs uppercase tracking-widest text-terracotta">
-              03
-            </p>
-          </div>
-          <div className="md:col-span-7">
-            <h2 className="font-serif font-bold text-charcoal mb-6"
-              style={{ fontSize: "clamp(1.75rem, 3vw, 2.5rem)" }}>
-              AI Tool Design and Build
-            </h2>
-            <div className="prose-phil">
-              <p>
-                Phil builds custom AI tools for specific client problems. This
-                is the part of the work that keeps the consulting honest. He
-                does not just advise on AI. He builds with it.
-              </p>
-              <p>
-                The tools he designs tend to sit at the intersection of
-                communication and process: things that help organisations
-                gather better information, make clearer decisions, or get
-                complex thinking in front of the people who need it faster.
-              </p>
-              <p>
-                If you have a problem that might benefit from a bespoke AI
-                solution, the conversation starts the same way all his best
-                work does. With a question worth asking.
-              </p>
-            </div>
           </div>
         </section>
 
