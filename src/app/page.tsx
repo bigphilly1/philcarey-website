@@ -17,15 +17,23 @@ export default function Home() {
         <div className="max-w-wide mx-auto px-6 md:px-12 w-full">
           <div className="grid md:grid-cols-12 gap-8 items-end py-20 md:py-28">
 
-            {/* Left: subheadline + buttons */}
+            {/* Left: subheadline + quote + buttons */}
             <div className="md:col-span-7 flex flex-col justify-end">
-              <p className="font-sans text-lg md:text-xl text-charcoal-mid leading-relaxed max-w-prose mb-10">
+              <p className="font-sans text-lg md:text-xl text-charcoal-mid leading-relaxed max-w-prose mb-8">
                 Videos, AI tools, books, ideas. He is the author of{" "}
                 <em className="font-serif">The Curiosity Advantage</em>, Creative
                 Director of Cornerstone Media, and an independent AI consultant
                 working with leaders across Australia. The craft behind the
                 thinking has been more than thirty years in the making.
               </p>
+
+              {/* Pull quote — Zilla Slab */}
+              <div className="accent-pull mb-10">
+                <p className="font-slab italic text-xl md:text-2xl text-charcoal leading-snug">
+                  &ldquo;Amazing doors open when human and computer work
+                  together.&rdquo;
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-4">
                 <Link
@@ -43,7 +51,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: portrait + name + quote */}
+            {/* Right: portrait + name */}
             <div className="md:col-span-4 md:col-start-9 md:pb-4 flex flex-col gap-5">
               {/* Square portrait */}
               <div className="relative w-full aspect-square overflow-hidden">
@@ -66,14 +74,6 @@ export default function Home() {
                   creates things.
                 </span>
               </h1>
-
-              {/* Pull quote — Zilla Slab */}
-              <div className="accent-pull">
-                <p className="font-slab italic text-xl md:text-2xl text-charcoal leading-snug">
-                  &ldquo;Amazing doors open when human and computer work
-                  together.&rdquo;
-                </p>
-              </div>
             </div>
 
           </div>
