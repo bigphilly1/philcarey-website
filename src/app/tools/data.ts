@@ -1,6 +1,7 @@
 export interface App {
   slug: string;
   title: string;
+  category: string;
   tagline: string;
   description: string[];
 }
@@ -9,6 +10,7 @@ export const apps: App[] = [
   {
     slug: "client-intelligence-system",
     title: "Client Intelligence System",
+    category: "Client ops",
     tagline: "A daily briefing on every client relationship, drafted and ready.",
     description: [
       "Most business owners know they should stay in better contact with clients. They just don't know who to call, what to say, or where to start. The Client Intelligence System solves that problem, not by managing your contacts, but by thinking alongside you.",
@@ -21,6 +23,7 @@ export const apps: App[] = [
   {
     slug: "throughline",
     title: "Throughline",
+    category: "Communication",
     tagline: "Four questions that turn your work into a story people act on.",
     description: [
       "Most professionals know their work matters. Few can explain why in a way that moves anyone to act. That gap costs businesses more than they realise. Deals that stall. Proposals that get shelved. Ideas that never find the room they deserve. Not because the work was wrong, but because the story behind it never landed.",
@@ -33,6 +36,7 @@ export const apps: App[] = [
   {
     slug: "the-key-and-the-plate",
     title: "The Key & The Plate",
+    category: "Leadership diagnostic",
     tagline: "A 15-minute assessment of your AI leadership pattern.",
     description: [
       "Most leaders approach AI the same way: more tools, more speed, more output. The result is burned-out teams and decisions made without real clarity. The Key & The Plate flips that script.",
@@ -45,6 +49,7 @@ export const apps: App[] = [
   {
     slug: "simple-signals",
     title: "Simple Signals",
+    category: "Self-awareness",
     tagline: "Two minutes of self-observation. Patterns that make you smarter.",
     description: [
       "Most business owners are brilliant at reading their market, their team, their competition. The one thing they rarely read clearly is themselves. Not because they are not self-aware. Because nobody ever showed them their own data.",
@@ -57,6 +62,7 @@ export const apps: App[] = [
   {
     slug: "personal-command-centre",
     title: "Personal Command Centre",
+    category: "Productivity",
     tagline: "One screen every morning. Everything that matters, in the right order.",
     description: [
       "Most people start the day behind. They open their phone and immediately split their attention across five apps, three notifications and a shopping list they wrote at midnight. By 9am they are reactive, not intentional.",
@@ -68,6 +74,7 @@ export const apps: App[] = [
   {
     slug: "careobs",
     title: "CareObs",
+    category: "Aged care",
     tagline: "Structured observation for aged care that gives nurses back their thinking time.",
     description: [
       "Most aged care systems have been built on an assumption nobody examined. That experienced nurses should spend their most valuable hours recording what they already know, twice, before it becomes useful. Two to three hours every shift. Not lost to administration. Stolen from thinking.",
@@ -80,6 +87,7 @@ export const apps: App[] = [
   {
     slug: "feel-happy",
     title: "How to Feel Happy When You Feel Crappy",
+    category: "Wellbeing",
     tagline: "Three evidence-based tools to shift your brain state in under 20 minutes.",
     description: [
       "Most productivity advice assumes you are already at your best. This app starts from where you actually are. On days when your energy is low, your thinking narrows. Cortisol rises, working memory shrinks, and the quality of your decisions drops. Research is clear on this. A stressed brain is not a strategic brain.",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { apps } from "./tools/data";
+import ToolsGrid from "./tools/ToolsGrid";
 
 export const metadata: Metadata = {
   title: "Phil Carey — AI Strategist, Author, Corporate Media Producer",
@@ -22,8 +22,7 @@ export default function Home() {
             <div className="md:col-span-7 flex flex-col justify-start">
               <h1 className="font-slab font-bold text-charcoal mb-8"
                 style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)", lineHeight: "1.4", letterSpacing: "0.02em" }}>
-                &ldquo;Amazing doors open when human and computer work
-                together.&rdquo;
+                The interesting work happens when the human and the computer think together.
               </h1>
 
               <p className="font-sans text-lg md:text-xl text-charcoal-mid leading-relaxed max-w-prose mb-10">
@@ -50,9 +49,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: portrait + name */}
+            {/* Right: portrait */}
             <div className="md:col-span-4 md:col-start-9 md:pb-4 flex flex-col gap-5">
-              {/* Square portrait */}
               <div className="relative w-full aspect-square overflow-hidden">
                 <Image
                   src="/phil-carey.jpg"
@@ -63,16 +61,6 @@ export default function Home() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-
-              {/* Name + tagline under image */}
-              <h1 className="font-serif leading-snug" style={{ fontSize: "20pt" }}>
-                <span className="font-bold text-charcoal block">
-                  Phil Carey
-                </span>
-                <span className="italic font-normal text-charcoal-mid block">
-                  creates things.
-                </span>
-              </h1>
             </div>
 
           </div>
@@ -85,67 +73,50 @@ export default function Home() {
       {/* ── TOOLS ────────────────────────────────────────────── */}
       <section id="tools" className="section-gap">
         <div className="max-w-wide mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-12 gap-x-8 gap-y-12">
 
-            <div className="md:col-span-3">
-              <p className="font-sans text-sm uppercase tracking-widest text-charcoal-light">
-                Built things
-              </p>
-            </div>
-
-            <div className="md:col-span-9 grid md:grid-cols-2 gap-x-10 gap-y-10">
-              {apps.map((app) => (
-                <Link
-                  key={app.slug}
-                  href={`/tools/${app.slug}`}
-                  className="group flex gap-5 items-start hover:opacity-80 transition-opacity"
-                >
-                  <div className="flex-shrink-0 text-charcoal-light group-hover:text-terracotta transition-colors">
-                    <AppIcon slug={app.slug} />
-                  </div>
-                  <div>
-                    <h3 className="font-serif font-bold text-base text-charcoal leading-snug mb-1 group-hover:text-terracotta transition-colors">
-                      {app.title}
-                    </h3>
-                    <p className="font-sans text-sm text-charcoal-mid leading-relaxed">
-                      {app.tagline}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-
+          <div className="mb-10">
+            <p className="font-sans text-xs uppercase tracking-widest text-terracotta mb-3">
+              Things he&apos;s actually built
+            </p>
+            <h2 className="font-serif font-black text-charcoal leading-none mb-3"
+              style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
+              Proof, not slides.
+            </h2>
+            <p className="font-sans text-base text-charcoal-mid leading-relaxed max-w-prose">
+              A working portfolio of AI tools built for real problems.
+            </p>
           </div>
+
+          <ToolsGrid />
+
         </div>
       </section>
 
-      {/* ── WHAT PHIL DOES ───────────────────────────────────── */}
-      <section className="section-gap">
+      {/* ── THE WORK ─────────────────────────────────────────── */}
+      <section className="border-t border-rule-line section-gap">
         <div className="max-w-wide mx-auto px-6 md:px-12">
 
           <div className="grid md:grid-cols-12 gap-x-8 gap-y-12">
 
-            {/* Section label */}
             <div className="md:col-span-3">
               <p className="font-sans text-sm uppercase tracking-widest text-charcoal-light">
-                The work
+                How to engage
               </p>
             </div>
 
-            {/* Three areas */}
             <div className="md:col-span-9 grid md:grid-cols-3 gap-8 md:gap-10">
               {[
                 {
                   title: "AI Strategy",
                   body:
-                    "Helping organisations think more clearly about artificial intelligence, and building the tools to prove it. Phil does not just advise on AI. He builds with it, designing bespoke solutions at the intersection of communication and process.",
+                    "Clearer decisions about AI, and bespoke tools that prove the thinking. Phil works with executives, boards, and leadership teams — and builds with them, not just for them.",
                   href: "/work",
                 },
                 {
-                  title: "The Book",
+                  title: "Speaking & Workshops",
                   body:
-                    "The Curiosity Advantage argues that your experience of AI depends less on the technology and more on the mind you bring to it. Better questions produce better futures.",
-                  href: "/book",
+                    "Sessions built around specific decisions, not general theory. Phil speaks to leadership teams, conferences, and boards on AI thinking, curiosity, and the craft of better questions.",
+                  href: "/contact",
                 },
                 {
                   title: "Cornerstone Media",
@@ -155,9 +126,9 @@ export default function Home() {
                 },
               ].map((item) => (
                 <div key={item.title}>
-                  <h2 className="font-serif font-bold text-xl text-charcoal mb-4">
+                  <h3 className="font-serif font-bold text-xl text-charcoal mb-4">
                     {item.title}
-                  </h2>
+                  </h3>
                   <p className="font-sans text-base text-charcoal-mid leading-relaxed mb-4">
                     {item.body}
                   </p>
@@ -175,14 +146,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PULL QUOTE ───────────────────────────────────────── */}
+      <section className="border-t border-rule-line py-24 md:py-36">
+        <div className="max-w-wide mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-12">
+            <div className="md:col-span-8 md:col-start-3 text-center">
+              <p className="font-slab italic text-charcoal leading-tight mb-6"
+                style={{ fontSize: "clamp(1.75rem, 3.5vw, 3rem)" }}>
+                &ldquo;The question is the lever. The future is the lift.&rdquo;
+              </p>
+              <p className="font-sans text-sm uppercase tracking-widest text-charcoal-light">
+                The Curiosity Advantage
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── BOOK FEATURE ─────────────────────────────────────── */}
-      <section className="border-t border-rule-line section-gap bg-cream-dark">
+      <section className="border-t border-rule-line section-gap bg-charcoal">
         <div className="max-w-wide mx-auto px-6 md:px-12">
 
           <div className="grid md:grid-cols-12 gap-x-8 gap-y-10 items-center">
 
             <div className="md:col-span-5">
-              {/* Book cover */}
               <div
                 className="w-full relative aspect-[3/4] shadow-2xl"
                 style={{ maxWidth: "320px" }}
@@ -201,23 +188,22 @@ export default function Home() {
               <p className="font-sans text-sm uppercase tracking-widest text-terracotta mb-6">
                 Now available
               </p>
-              <h2 className="font-serif font-black text-charcoal leading-tight mb-6"
+              <h2 className="font-serif font-black text-cream leading-tight mb-6"
                 style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}>
                 The Curiosity<br />
                 <span className="italic font-normal">Advantage</span>
               </h2>
-              <p className="font-sans text-base text-charcoal-mid leading-relaxed mb-6 max-w-prose">
+              <p className="font-sans text-base text-cream/70 leading-relaxed mb-6 max-w-prose">
                 How Better Questions Create Better Futures in the Age of AI.
               </p>
-              <p className="font-sans text-base text-charcoal-mid leading-relaxed mb-8 max-w-prose">
-                The question is the lever. The future is the lift. This is not a
-                book about prompts. It is about the psychology of working with AI
-                as a thinking partner, and what becomes possible when curiosity
-                drives the conversation.
+              <p className="font-sans text-base text-cream/70 leading-relaxed mb-8 max-w-prose">
+                This is not a book about prompts. It is about the psychology of
+                working with AI as a thinking partner, and what becomes possible
+                when curiosity drives the conversation.
               </p>
               <Link
                 href="/book"
-                className="inline-block bg-terracotta text-cream font-sans text-sm uppercase tracking-widest px-7 py-3.5 hover:bg-terracotta-dark transition-colors"
+                className="inline-block border border-cream text-cream font-sans text-sm uppercase tracking-widest px-7 py-3.5 hover:bg-cream hover:text-charcoal transition-colors"
               >
                 About the book
               </Link>
@@ -244,12 +230,9 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="md:col-span-9 grid md:grid-cols-2 gap-8">
+            <div className="md:col-span-9 grid md:grid-cols-3 gap-8">
               {ideasPreview.map((piece) => (
                 <article key={piece.slug} className="border-t border-rule-line pt-6">
-                  <p className="font-sans text-xs uppercase tracking-widest text-charcoal-light mb-3">
-                    {piece.date}
-                  </p>
                   <h3 className="font-serif font-bold text-lg text-charcoal leading-snug mb-3">
                     <Link
                       href={`/ideas/${piece.slug}`}
@@ -293,107 +276,24 @@ export default function Home() {
   );
 }
 
-function AppIcon({ slug }: { slug: string }) {
-  const props = {
-    width: 40,
-    height: 40,
-    viewBox: "0 0 40 40",
-    fill: "none",
-    stroke: "currentColor",
-    strokeWidth: 1.5,
-    strokeLinecap: "round" as const,
-    strokeLinejoin: "round" as const,
-  };
-  switch (slug) {
-    case "client-intelligence-system":
-      return (
-        <svg {...props}>
-          <rect x="4" y="11" width="32" height="22" rx="1" />
-          <polyline points="4,11 20,23 36,11" />
-          <line x1="20" y1="4" x2="20" y2="8" />
-          <line x1="25" y1="5.5" x2="22.5" y2="8" />
-          <line x1="15" y1="5.5" x2="17.5" y2="8" />
-        </svg>
-      );
-    case "throughline":
-      return (
-        <svg {...props}>
-          <path d="M4 28 Q10 8 20 20 Q30 32 36 12" />
-          <polyline points="30,6 36,12 30,18" />
-        </svg>
-      );
-    case "the-key-and-the-plate":
-      return (
-        <svg {...props}>
-          <circle cx="13" cy="20" r="9" />
-          <circle cx="13" cy="20" r="4" />
-          <line x1="22" y1="20" x2="38" y2="20" />
-          <line x1="34" y1="20" x2="34" y2="26" />
-          <line x1="29" y1="20" x2="29" y2="25" />
-        </svg>
-      );
-    case "simple-signals":
-      return (
-        <svg {...props}>
-          <polyline points="2,20 7,20 10,10 13,30 16,15 19,25 22,12 25,28 28,18 31,20 38,20" />
-        </svg>
-      );
-    case "personal-command-centre":
-      return (
-        <svg {...props}>
-          <rect x="4" y="4" width="32" height="32" rx="1" />
-          <line x1="4" y1="14" x2="36" y2="14" />
-          <line x1="20" y1="14" x2="20" y2="36" />
-          <line x1="8" y1="20" x2="16" y2="20" />
-          <line x1="8" y1="25" x2="14" y2="25" />
-          <line x1="24" y1="20" x2="32" y2="20" />
-          <line x1="24" y1="25" x2="30" y2="25" />
-        </svg>
-      );
-    case "careobs":
-      return (
-        <svg {...props}>
-          <rect x="10" y="3" width="20" height="28" rx="1" />
-          <line x1="15" y1="11" x2="25" y2="11" />
-          <line x1="15" y1="17" x2="25" y2="17" />
-          <line x1="15" y1="23" x2="21" y2="23" />
-          <path d="M10 31 Q10 37 20 37 Q30 37 30 31" />
-        </svg>
-      );
-    case "feel-happy":
-      return (
-        <svg {...props}>
-          <circle cx="20" cy="20" r="8" />
-          <line x1="20" y1="4" x2="20" y2="8" />
-          <line x1="20" y1="32" x2="20" y2="36" />
-          <line x1="4" y1="20" x2="8" y2="20" />
-          <line x1="32" y1="20" x2="36" y2="20" />
-          <line x1="8.7" y1="8.7" x2="11.5" y2="11.5" />
-          <line x1="28.5" y1="28.5" x2="31.3" y2="31.3" />
-          <line x1="31.3" y1="8.7" x2="28.5" y2="11.5" />
-          <line x1="11.5" y1="28.5" x2="8.7" y2="31.3" />
-          <path d="M15 23 Q20 27 25 23" />
-        </svg>
-      );
-    default:
-      return null;
-  }
-}
-
 // Preview data — replace with CMS/MDX when ideas content is ready
 const ideasPreview = [
   {
     slug: "the-question-behind-the-question",
     title: "The question behind the question",
-    date: "May 2025",
     excerpt:
       "Every question contains a frame. A belief, an assumption, an emotional lean. Most people never examine the frame. AI makes it visible.",
   },
   {
     slug: "ai-is-not-the-threat",
     title: "AI took the task. Your judgment remained.",
-    date: "April 2025",
     excerpt:
       "A graphic designer lost a pitch last month. Not because her work was not good enough. She never got to show it. Speed was not the problem.",
+  },
+  {
+    slug: "the-curious-leader",
+    title: "The one question that changes the room",
+    excerpt:
+      "Satya Nadella walked into a Microsoft leadership meeting in 2014 and asked a single question. The answer defined the next decade of the company.",
   },
 ];
