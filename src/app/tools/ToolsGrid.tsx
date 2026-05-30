@@ -89,8 +89,11 @@ function AppIcon({ slug }: { slug: string }) {
     case "throughline":
       return (
         <svg {...props}>
-          <path d="M4 28 Q10 8 20 20 Q30 32 36 12" />
-          <polyline points="30,6 36,12 30,18" />
+          <path d="M6 15 L14 15 L28 6 L28 34 L14 25 L6 25 Z" />
+          <line x1="14" y1="15" x2="14" y2="25" />
+          <path d="M6 25 L6 32" />
+          <path d="M32 13 Q37 20 32 27" />
+          <path d="M34 9 Q42 20 34 31" />
         </svg>
       );
     case "the-key-and-the-plate":

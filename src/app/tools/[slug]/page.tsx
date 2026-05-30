@@ -7,8 +7,9 @@ export function generateStaticParams() {
   return apps.map((app) => ({ slug: app.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const app = apps.find((a) => a.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const app = apps.find((a) => a.slug === slug);
   if (!app) return {};
   return {
     title: `${app.title} — Phil Carey`,
@@ -17,8 +18,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ToolPage({ params }: { params: { slug: string } }) {
-  const app = apps.find((a) => a.slug === params.slug);
+export default async function ToolPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const app = apps.find((a) => a.slug === slug);
   if (!app) notFound();
 
   return (
@@ -35,6 +37,9 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
               </Link>
             </div>
             <div className="md:col-span-8">
+              <p className="font-sans text-xs uppercase tracking-widest text-terracotta mb-4">
+                {app.category}
+              </p>
               <h1
                 className="font-serif font-black text-charcoal leading-none mb-6"
                 style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
@@ -53,7 +58,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
         <div className="grid md:grid-cols-12 gap-x-8">
           <div className="md:col-span-7 md:col-start-4 prose-phil space-y-6">
             {app.description.map((para, i) => (
-              <p key={i}>{para}</p>
+              <p key={i} className="font-sans text-base text-charcoal-mid leading-relaxed">{para}</p>
             ))}
           </div>
         </div>
