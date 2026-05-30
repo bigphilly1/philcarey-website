@@ -13,23 +13,6 @@ export default function ToolsGrid() {
 
   return (
     <>
-      {/* Filter pills */}
-      <div className="flex flex-wrap gap-2 mb-10">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActive(cat)}
-            className={`font-sans text-xs uppercase tracking-widest px-4 py-2 border transition-colors ${
-              active === cat
-                ? "border-terracotta bg-terracotta text-cream"
-                : "border-rule-line text-charcoal-mid hover:border-terracotta hover:text-terracotta"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-
       {/* Card grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {visible.map((app) => (
@@ -58,6 +41,23 @@ export default function ToolsGrid() {
               </p>
             </div>
           </Link>
+        ))}
+      </div>
+
+      {/* Filter pills */}
+      <div className="flex flex-wrap gap-2 mt-10">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActive(cat)}
+            className={`font-sans text-xs uppercase tracking-widest px-4 py-2 border transition-colors ${
+              active === cat
+                ? "border-terracotta bg-terracotta text-cream"
+                : "border-rule-line text-charcoal-mid hover:border-terracotta hover:text-terracotta"
+            }`}
+          >
+            {cat}
+          </button>
         ))}
       </div>
     </>
