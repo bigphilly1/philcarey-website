@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="min-h-screen flex flex-col justify-center pt-16">
+      <section className="flex flex-col justify-center pt-16">
         <div className="max-w-wide mx-auto px-6 md:px-12 w-full">
           <div className="grid md:grid-cols-12 gap-8 items-start py-12 md:py-16">
 
