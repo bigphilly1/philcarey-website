@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: "#FAF7F2",
-        "cream-dark": "#F0EBE3",
+        cream: "#FAF4E0",
+        "cream-dark": "#EDE4D0",
         terracotta: "#B85C38",
         "terracotta-dark": "#8F4020",
         charcoal: "#1C1C1A",
