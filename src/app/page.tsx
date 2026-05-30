@@ -19,6 +19,18 @@ export default function Home() {
 
             {/* Left: headline block */}
             <div className="md:col-span-7">
+              {/* Portrait */}
+              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6">
+                <Image
+                  src="/phil-carey.jpg"
+                  alt="Phil Carey"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                  sizes="160px"
+                />
+              </div>
+
               <p className="font-sans text-sm uppercase tracking-widest text-terracotta mb-8">
                 Sydney, Australia
               </p>
