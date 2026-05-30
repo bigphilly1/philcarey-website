@@ -20,7 +20,7 @@ export default function Home() {
             {/* Left: headline + subheadline + buttons */}
             <div className="md:col-span-7 flex flex-col justify-start">
               <h1 className="font-serif font-bold text-charcoal leading-tight mb-8"
-                style={{ fontSize: "clamp(2rem, 3.5vw, 3rem)" }}>
+                style={{ fontSize: "clamp(0.8rem, 1.4vw, 1.2rem)" }}>
                 &ldquo;Amazing doors open when human and computer work
                 together.&rdquo;
               </h1>
