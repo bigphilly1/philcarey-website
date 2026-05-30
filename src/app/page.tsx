@@ -23,22 +23,21 @@ export default function Home() {
                 Sydney, Australia
               </p>
 
-              <h1 className="font-serif mb-8 leading-none"
-                style={{ fontSize: "clamp(3rem, 7vw, 6rem)" }}>
-                <span className="italic font-normal text-charcoal-mid">
-                  makes things.
-                </span><br />
-                <span className="font-bold text-charcoal">
+              <h1 className="font-serif mb-8 leading-snug text-xl md:text-2xl">
+                <span className="font-bold text-charcoal block">
                   Phil Carey
+                </span>
+                <span className="italic font-normal text-charcoal-mid block">
+                  creates things.
                 </span>
               </h1>
 
               <p className="font-sans text-lg md:text-xl text-charcoal-mid leading-relaxed max-w-prose mb-10">
-                Videos, tools, books, ideas. He is the author of{" "}
+                Videos, AI tools, books, ideas. He is the author of{" "}
                 <em className="font-serif">The Curiosity Advantage</em>, Creative
                 Director of Cornerstone Media, and an independent AI consultant
                 working with leaders across Australia. The craft behind the
-                thinking has been thirty years in the making.
+                thinking has been more than thirty years in the making.
               </p>
 
               <div className="flex flex-wrap gap-4">
