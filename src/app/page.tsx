@@ -57,7 +57,7 @@ export default function Home() {
                   src="/phil-carey.jpg"
                   alt="Phil Carey"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-top"
                   priority
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
