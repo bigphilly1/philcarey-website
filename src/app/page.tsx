@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { apps } from "./tools/data";
 
 export const metadata: Metadata = {
   title: "Phil Carey — AI Strategist, Author, Corporate Media Producer",
@@ -79,6 +80,43 @@ export default function Home() {
 
         {/* Ruled divider */}
         <div className="border-t border-rule-line" />
+      </section>
+
+      {/* ── TOOLS ────────────────────────────────────────────── */}
+      <section id="tools" className="section-gap">
+        <div className="max-w-wide mx-auto px-6 md:px-12">
+          <div className="grid md:grid-cols-12 gap-x-8 gap-y-12">
+
+            <div className="md:col-span-3">
+              <p className="font-sans text-sm uppercase tracking-widest text-charcoal-light">
+                Built things
+              </p>
+            </div>
+
+            <div className="md:col-span-9 grid md:grid-cols-2 gap-x-10 gap-y-10">
+              {apps.map((app) => (
+                <Link
+                  key={app.slug}
+                  href={`/tools/${app.slug}`}
+                  className="group flex gap-5 items-start hover:opacity-80 transition-opacity"
+                >
+                  <div className="flex-shrink-0 text-charcoal-light group-hover:text-terracotta transition-colors">
+                    <AppIcon slug={app.slug} />
+                  </div>
+                  <div>
+                    <h3 className="font-serif font-bold text-base text-charcoal leading-snug mb-1 group-hover:text-terracotta transition-colors">
+                      {app.title}
+                    </h3>
+                    <p className="font-sans text-sm text-charcoal-mid leading-relaxed">
+                      {app.tagline}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+          </div>
+        </div>
       </section>
 
       {/* ── WHAT PHIL DOES ───────────────────────────────────── */}
@@ -253,6 +291,93 @@ export default function Home() {
       </section>
     </>
   );
+}
+
+function AppIcon({ slug }: { slug: string }) {
+  const props = {
+    width: 40,
+    height: 40,
+    viewBox: "0 0 40 40",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.5,
+    strokeLinecap: "round" as const,
+    strokeLinejoin: "round" as const,
+  };
+  switch (slug) {
+    case "client-intelligence-system":
+      return (
+        <svg {...props}>
+          <rect x="4" y="11" width="32" height="22" rx="1" />
+          <polyline points="4,11 20,23 36,11" />
+          <line x1="20" y1="4" x2="20" y2="8" />
+          <line x1="25" y1="5.5" x2="22.5" y2="8" />
+          <line x1="15" y1="5.5" x2="17.5" y2="8" />
+        </svg>
+      );
+    case "throughline":
+      return (
+        <svg {...props}>
+          <path d="M4 28 Q10 8 20 20 Q30 32 36 12" />
+          <polyline points="30,6 36,12 30,18" />
+        </svg>
+      );
+    case "the-key-and-the-plate":
+      return (
+        <svg {...props}>
+          <circle cx="13" cy="20" r="9" />
+          <circle cx="13" cy="20" r="4" />
+          <line x1="22" y1="20" x2="38" y2="20" />
+          <line x1="34" y1="20" x2="34" y2="26" />
+          <line x1="29" y1="20" x2="29" y2="25" />
+        </svg>
+      );
+    case "simple-signals":
+      return (
+        <svg {...props}>
+          <polyline points="2,20 7,20 10,10 13,30 16,15 19,25 22,12 25,28 28,18 31,20 38,20" />
+        </svg>
+      );
+    case "personal-command-centre":
+      return (
+        <svg {...props}>
+          <rect x="4" y="4" width="32" height="32" rx="1" />
+          <line x1="4" y1="14" x2="36" y2="14" />
+          <line x1="20" y1="14" x2="20" y2="36" />
+          <line x1="8" y1="20" x2="16" y2="20" />
+          <line x1="8" y1="25" x2="14" y2="25" />
+          <line x1="24" y1="20" x2="32" y2="20" />
+          <line x1="24" y1="25" x2="30" y2="25" />
+        </svg>
+      );
+    case "careobs":
+      return (
+        <svg {...props}>
+          <rect x="10" y="3" width="20" height="28" rx="1" />
+          <line x1="15" y1="11" x2="25" y2="11" />
+          <line x1="15" y1="17" x2="25" y2="17" />
+          <line x1="15" y1="23" x2="21" y2="23" />
+          <path d="M10 31 Q10 37 20 37 Q30 37 30 31" />
+        </svg>
+      );
+    case "feel-happy":
+      return (
+        <svg {...props}>
+          <circle cx="20" cy="20" r="8" />
+          <line x1="20" y1="4" x2="20" y2="8" />
+          <line x1="20" y1="32" x2="20" y2="36" />
+          <line x1="4" y1="20" x2="8" y2="20" />
+          <line x1="32" y1="20" x2="36" y2="20" />
+          <line x1="8.7" y1="8.7" x2="11.5" y2="11.5" />
+          <line x1="28.5" y1="28.5" x2="31.3" y2="31.3" />
+          <line x1="31.3" y1="8.7" x2="28.5" y2="11.5" />
+          <line x1="11.5" y1="28.5" x2="8.7" y2="31.3" />
+          <path d="M15 23 Q20 27 25 23" />
+        </svg>
+      );
+    default:
+      return null;
+  }
 }
 
 // Preview data — replace with CMS/MDX when ideas content is ready
