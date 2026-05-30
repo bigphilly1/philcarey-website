@@ -19,22 +19,6 @@ export default function Home() {
 
             {/* Left: headline block */}
             <div className="md:col-span-7">
-              {/* Portrait */}
-              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden mb-6">
-                <Image
-                  src="/phil-carey.jpg"
-                  alt="Phil Carey"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  sizes="160px"
-                />
-              </div>
-
-              <p className="font-sans text-sm uppercase tracking-widest text-terracotta mb-8">
-                Sydney, Australia
-              </p>
-
               <h1 className="font-serif mb-8 leading-snug text-xl md:text-2xl">
                 <span className="font-bold text-charcoal block">
                   Phil Carey
@@ -68,8 +52,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: asymmetric pull-quote */}
-            <div className="md:col-span-4 md:col-start-9 md:pb-4">
+            {/* Right: portrait + pull-quote */}
+            <div className="md:col-span-4 md:col-start-9 md:pb-4 flex flex-col gap-6">
+              {/* Square portrait */}
+              <div className="relative w-full aspect-square overflow-hidden">
+                <Image
+                  src="/phil-carey.jpg"
+                  alt="Phil Carey"
+                  fill
+                  className="object-cover object-top"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
+
               <div className="accent-pull">
                 <p className="font-serif italic text-xl md:text-2xl text-charcoal leading-snug">
                   &ldquo;The interesting work happens when the human and the
