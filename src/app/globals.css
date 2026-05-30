@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-lato: 'Lato', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #1C1C1A;
+  font-family: var(--font-lato);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography utilities */
+.font-serif {
+  font-family: var(--font-playfair);
+}
+
+.font-sans {
+  font-family: var(--font-lato);
+}
+
+/* Prose styles */
+.prose-phil p {
+  font-family: var(--font-lato);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: #1C1C1A;
+  margin-bottom: 1.5rem;
+}
+
+.prose-phil p:last-child {
+  margin-bottom: 0;
+}
+
+/* Rule lines */
+.rule {
+  border-color: #D9D2C7;
+}
+
+/* Terracotta link underline */
+a.underline-terra {
+  text-decoration: underline;
+  text-decoration-color: #B85C38;
+  text-underline-offset: 3px;
+}
+
+a.underline-terra:hover {
+  color: #B85C38;
+}
+
+/* Nav link hover */
+.nav-link {
+  position: relative;
+  color: #3A3A38;
+  font-family: var(--font-lato);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #B85C38;
+  transition: width 0.25s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #1C1C1A;
+}
+
+/* Section spacing */
+.section-gap {
+  padding-top: clamp(5rem, 10vw, 9rem);
+  padding-bottom: clamp(5rem, 10vw, 9rem);
+}
+
+/* Asymmetric accent block */
+.accent-pull {
+  border-left: 3px solid #B85C38;
+  padding-left: 1.5rem;
+}
