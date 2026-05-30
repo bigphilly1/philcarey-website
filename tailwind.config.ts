@@ -21,6 +21,7 @@ const config: Config = {
       fontFamily: {
         serif: ["var(--font-playfair)", "Georgia", "serif"],
         sans: ["var(--font-lato)", "system-ui", "sans-serif"],
+        slab: ["'Zilla Slab'", "Georgia", "serif"],
       },
       fontSize: {
         "display-xl": ["clamp(3rem, 6vw, 5.5rem)", { lineHeight: "1.05" }],

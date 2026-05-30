@@ -17,17 +17,8 @@ export default function Home() {
         <div className="max-w-wide mx-auto px-6 md:px-12 w-full">
           <div className="grid md:grid-cols-12 gap-8 items-end py-20 md:py-28">
 
-            {/* Left: headline block */}
-            <div className="md:col-span-7">
-              <h1 className="font-serif mb-8 leading-snug text-xl md:text-2xl">
-                <span className="font-bold text-charcoal block">
-                  Phil Carey
-                </span>
-                <span className="italic font-normal text-charcoal-mid block">
-                  creates things.
-                </span>
-              </h1>
-
+            {/* Left: subheadline + buttons */}
+            <div className="md:col-span-7 flex flex-col justify-end">
               <p className="font-sans text-lg md:text-xl text-charcoal-mid leading-relaxed max-w-prose mb-10">
                 Videos, AI tools, books, ideas. He is the author of{" "}
                 <em className="font-serif">The Curiosity Advantage</em>, Creative
@@ -52,8 +43,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: portrait + pull-quote */}
-            <div className="md:col-span-4 md:col-start-9 md:pb-4 flex flex-col gap-6">
+            {/* Right: portrait + name + quote */}
+            <div className="md:col-span-4 md:col-start-9 md:pb-4 flex flex-col gap-5">
               {/* Square portrait */}
               <div className="relative w-full aspect-square overflow-hidden">
                 <Image
@@ -66,10 +57,21 @@ export default function Home() {
                 />
               </div>
 
+              {/* Name + tagline under image */}
+              <h1 className="font-serif leading-snug text-xl md:text-2xl">
+                <span className="font-bold text-charcoal block">
+                  Phil Carey
+                </span>
+                <span className="italic font-normal text-charcoal-mid block">
+                  creates things.
+                </span>
+              </h1>
+
+              {/* Pull quote — Zilla Slab */}
               <div className="accent-pull">
-                <p className="font-serif italic text-xl md:text-2xl text-charcoal leading-snug">
-                  &ldquo;The interesting work happens when the human and the
-                  computer think together.&rdquo;
+                <p className="font-slab italic text-xl md:text-2xl text-charcoal leading-snug">
+                  &ldquo;Amazing doors open when human and computer work
+                  together.&rdquo;
                 </p>
               </div>
             </div>
