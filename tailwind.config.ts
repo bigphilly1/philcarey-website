@@ -19,9 +19,11 @@ const config: Config = {
         "rule-line": "#D9D2C7",
       },
       fontFamily: {
-        serif: ["'Zilla Slab'", "Georgia", "serif"],
-        sans: ["var(--font-lato)", "system-ui", "sans-serif"],
-        slab: ["'Zilla Slab'", "Georgia", "serif"],
+        serif:  ["'Zilla Slab'", "Georgia", "serif"],
+        body:   ["'Spectral'", "Georgia", "serif"],
+        mono:   ["'Spline Sans Mono'", "ui-monospace", "monospace"],
+        sans:   ["'Lato'", "system-ui", "sans-serif"],
+        slab:   ["'Zilla Slab'", "Georgia", "serif"],
       },
       fontSize: {
         "display-xl": ["clamp(3rem, 6vw, 5.5rem)", { lineHeight: "1.05" }],
