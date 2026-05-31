@@ -108,7 +108,6 @@ export default function Home() {
                     style={{ filter: "saturate(0.92) contrast(1.04)" }}
                   />
                 </div>
-                <span className="hx-portrait-q" aria-hidden="true">?</span>
               </div>
             </Reveal>
           </div>
