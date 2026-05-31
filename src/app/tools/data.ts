@@ -98,4 +98,18 @@ export const apps: App[] = [
       "You open it when you are struggling. You close it ready to think clearly again.",
     ],
   },
+  {
+    slug: "sector-rotation-signal-tracker",
+    title: "Sector Rotation Signal Tracker",
+    category: "Investing",
+    tagline: "Five sectors. Five leading indicators. One daily signal before the news confirms it.",
+    description: [
+      "Most investors react to sector moves after they happen. Headlines confirm what already played out in price. The Sector Rotation Signal Tracker moves earlier by reading five leading indicators daily and scoring them across five sectors: Energy, Industrials, Semiconductors and AI Infrastructure, Materials and Commodities, and Financials.",
+      "Each indicator in each sector is scored bullish, neutral, or bearish. The five scores are weighted by their historical correlation to actual sector returns and combined into a single composite that drives the buy, sell, or hold signal. The rotation view shows all five sectors side by side so you see not just whether energy looks bullish, but whether energy is the strongest opportunity relative to the others right now.",
+      "Capital rotates. When money moves, seeing the signals together shows you the direction of that flow before price fully reflects it. For an investor, a BUY signal on energy means the weight of evidence across five leading indicators points to sector strength. The signal is the same across markets. The vehicle is yours — an ASX energy ETF, Woodside, Santos, or XLE depending on where you trade.",
+      "The dashboard takes under 30 seconds to read. One ring per sector. One line of plain English below it. Open the drawer if you want to see what is driving the signal. Close it and act if you do not.",
+      "It scans live data every time you run it, not cached summaries. It evaluates indicators that lead price, not lag it. Weights are calibrated against historical correlations between each indicator and actual sector returns. It shows signal trend over time, not just today, so you can see whether a BUY signal is strengthening or fading.",
+      "This is not financial advice and it is not a trading system. It is a structured daily briefing that replaces scattered news reading with a consistent, evidence-based framework. The signals are a starting point for your thinking, not a substitute for it.",
+    ],
+  },
 ];

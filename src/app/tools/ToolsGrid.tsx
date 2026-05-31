@@ -149,6 +149,14 @@ function AppIcon({ slug }: { slug: string }) {
           <path d="M15 23 Q20 27 25 23" />
         </svg>
       );
+    case "sector-rotation-signal-tracker":
+      return (
+        <svg {...props}>
+          <path d="M20 6 A14 14 0 1 0 34 20" strokeDasharray="none" />
+          <polyline points="30,6 34,20 22,18" />
+          <polyline points="10,26 15,20 19,23 24,15 30,16" />
+        </svg>
+      );
     default:
       return null;
   }
