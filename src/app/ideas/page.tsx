@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Ideas — Phil Carey",
@@ -8,107 +7,124 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://philcarey.me/ideas" },
 };
 
-// Article data — replace with CMS/MDX when scaling
 const articles = [
   {
-    slug: "the-question-behind-the-question",
-    title: "The question behind the question",
-    date: "May 2025",
+    slug: "skills-on-the-rise-the-curiosity-lens",
+    title: "Skills on the Rise: See Them Through the Curiosity Lens",
+    date: "February 2026",
     category: "AI & Thinking",
     excerpt:
-      "Every question contains a frame. A belief, an assumption, an emotional lean. Most people never examine the frame. AI makes it visible in ways nothing else quite does.",
+      "LinkedIn's 2026 Skills on the Rise list is worth a look. But the real edge is not what you know. It is how you think. Curiosity is not a soft skill. It is a competitive edge.",
   },
   {
-    slug: "ai-took-the-task",
-    title: "AI took the task. Your judgment remained.",
-    date: "April 2025",
+    slug: "on-schedule-vs-on-track",
+    title: "On Schedule vs On Track: The Most Important Question You'll Ask All Year",
+    date: "February 2026",
+    category: "Strategy",
+    excerpt:
+      "Being on schedule means activity is happening. Being on track means the activity is taking you where you need to go. AI makes the gap harder to recognise.",
+  },
+  {
+    slug: "ai-is-a-mirror-not-a-replacement",
+    title: "AI Is a Mirror, Not a Replacement",
+    date: "February 2026",
     category: "Work & AI",
     excerpt:
-      "A graphic designer lost a pitch last month. Not because her work was not good enough. She never got to show it. The adaptation most professionals need is not about speed.",
+      "Anthropic launched a tool designed to automate large parts of legal work. Share prices fell. Fears resurfaced. Here is what is important to remember if you are worried about losing your role to AI.",
   },
   {
-    slug: "the-curious-leader",
-    title: "The one question that changes the room",
-    date: "March 2025",
+    slug: "stop-looking-for-a-roadmap",
+    title: "Stop Looking for a Roadmap. Start With a Compass.",
+    date: "January 2026",
     category: "Leadership",
     excerpt:
-      "Satya Nadella walked into a Microsoft leadership meeting in 2014 and asked a single question. The answer defined the next decade of the company.",
+      "People keep trying to apply sat-nav logic to AI. Tell me the destination. Give me the roadmap. Show me the steps. But here is the problem.",
+  },
+  {
+    slug: "know-yourself-before-you-know-ai",
+    title: "Know Yourself Before You Know AI",
+    date: "January 2026",
+    category: "Self-awareness",
+    excerpt:
+      "The real reason people are skilling up in AI this year is to stay ahead. But only a few will succeed. The difference is not about prompts. It is about self-awareness.",
   },
 ];
+
+const BASE = "https://www.cornerstonemedia.com.au/blog";
 
 export default function Ideas() {
   return (
     <>
       {/* ── PAGE HEADER ──────────────────────────────────────── */}
-      <div className="pt-32 pb-0 border-b border-rule-line">
-        <div className="max-w-wide mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-12 gap-x-8 pb-16">
-            <div className="md:col-span-3">
-              <p className="font-sans text-sm uppercase tracking-widest text-charcoal-light mt-2">
-                Ideas
-              </p>
-            </div>
-            <div className="md:col-span-8">
-              <h1
-                className="font-serif font-black text-charcoal leading-none mb-4"
-                style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
-              >
-                Writing
-              </h1>
-              <p className="font-sans text-base text-charcoal-mid leading-relaxed max-w-prose">
-                Articles, opinion pieces, and thinking on AI, leadership, and
-                the changing nature of work. Updated regularly.
-              </p>
-            </div>
-          </div>
+      <div style={{ paddingTop: "8rem", borderBottom: "1px solid var(--line)" }}>
+        <div className="wrap" style={{ paddingBottom: "4rem" }}>
+          <div className="kicker" style={{ marginBottom: "1.5rem" }}>Ideas</div>
+          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "clamp(2.5rem, 5vw, 4.5rem)", lineHeight: 0.98, letterSpacing: "-0.025em", color: "var(--ink)", marginBottom: "1rem" }}>
+            Writing
+          </h1>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "1.05rem", lineHeight: 1.65, color: "var(--ink-soft)", maxWidth: "52ch" }}>
+            Articles, opinion pieces, and thinking on AI, leadership, and
+            the changing nature of work. Published on{" "}
+            <a href="https://www.cornerstonemedia.com.au/blog" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)" }}>
+              Cornerstone Media
+            </a>
+            .
+          </p>
         </div>
       </div>
 
       {/* ── ARTICLE LIST ─────────────────────────────────────── */}
-      <div className="max-w-wide mx-auto px-6 md:px-12 py-16">
-        <div className="grid md:grid-cols-12 gap-x-8">
-          <div className="md:col-span-9 md:col-start-4 space-y-0">
-            {articles.map((article, i) => (
-              <article
-                key={article.slug}
-                className={`grid md:grid-cols-9 gap-x-8 gap-y-4 py-12 ${
-                  i < articles.length - 1 ? "border-b border-rule-line" : ""
-                }`}
-              >
-                {/* Date + category */}
-                <div className="md:col-span-2">
-                  <p className="font-sans text-xs uppercase tracking-widest text-charcoal-light">
-                    {article.date}
-                  </p>
-                  <p className="font-sans text-xs text-terracotta mt-1">
-                    {article.category}
-                  </p>
-                </div>
+      <div className="wrap" style={{ paddingBlock: "4rem" }}>
+        {articles.map((article, i) => (
+          <article
+            key={article.slug}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "160px 1fr",
+              gap: "2rem",
+              paddingBlock: "3rem",
+              borderBottom: i < articles.length - 1 ? "1px solid var(--line)" : "none",
+            }}
+          >
+            {/* Date + category */}
+            <div>
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--ink-faint)", marginBottom: "0.4rem" }}>
+                {article.date}
+              </p>
+              <p style={{ fontFamily: "var(--font-mono)", fontSize: "0.68rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)" }}>
+                {article.category}
+              </p>
+            </div>
 
-                {/* Content */}
-                <div className="md:col-span-7">
-                  <h2 className="font-serif font-bold text-xl text-charcoal leading-snug mb-3">
-                    <Link
-                      href={`/ideas/${article.slug}`}
-                      className="hover:text-terracotta transition-colors"
-                    >
-                      {article.title}
-                    </Link>
-                  </h2>
-                  <p className="font-sans text-base text-charcoal-mid leading-relaxed mb-4">
-                    {article.excerpt}
-                  </p>
-                  <Link
-                    href={`/ideas/${article.slug}`}
-                    className="font-sans text-sm text-terracotta uppercase tracking-widest hover:text-terracotta-dark transition-colors"
-                  >
-                    Read &rarr;
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+            {/* Content */}
+            <div>
+              <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: "1.4rem", lineHeight: 1.1, letterSpacing: "-0.01em", color: "var(--ink)", marginBottom: "0.75rem" }}>
+                <a
+                  href={`${BASE}/${article.slug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "inherit", textDecoration: "none", transition: "color 0.2s" }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "var(--accent)")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "var(--ink)")}
+                >
+                  {article.title}
+                </a>
+              </h2>
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "1rem", lineHeight: 1.6, color: "var(--ink-soft)", marginBottom: "1rem" }}>
+                {article.excerpt}
+              </p>
+              <a
+                href={`${BASE}/${article.slug}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="alink"
+              >
+                <span className="u">Read on Cornerstone Media</span>
+                <span className="arw">&rarr;</span>
+              </a>
+            </div>
+          </article>
+        ))}
       </div>
     </>
   );
