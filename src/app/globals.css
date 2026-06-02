@@ -507,6 +507,16 @@ h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 600; line-height
 }
 
 /* ============================================================
+   Ideas page
+   ============================================================ */
+.ideas-title-link {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.22s var(--ease);
+}
+.ideas-title-link:hover { color: var(--accent); }
+
+/* ============================================================
    Terracotta link underline (inner pages)
    ============================================================ */
 a.underline-terra {

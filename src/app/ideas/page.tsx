@@ -103,9 +103,7 @@ export default function Ideas() {
                   href={`${BASE}/${article.slug}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: "inherit", textDecoration: "none", transition: "color 0.2s" }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "var(--accent)")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "var(--ink)")}
+                  className="ideas-title-link"
                 >
                   {article.title}
                 </a>
