@@ -68,18 +68,35 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — mailto button */}
+          {/* Right — email client buttons */}
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             <p style={{ fontFamily: "var(--font-body)", fontWeight: 300, fontSize: "1.15rem", lineHeight: 1.55, color: "var(--ink-soft)" }}>
-              Click below to open your email app with Phil&apos;s address already filled in.
+              Choose your email app — Phil&apos;s address is already filled in.
             </p>
-            <a
-              href={`mailto:${EMAIL}?subject=Getting%20in%20touch`}
-              className="btn"
-              style={{ alignSelf: "flex-start" }}
-            >
-              Send Phil an email <span className="arw">&rarr;</span>
-            </a>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", alignItems: "flex-start" }}>
+              <a
+                href={`https://mail.google.com/mail/?view=cm&to=${EMAIL}&su=Getting+in+touch`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
+                Open in Gmail <span className="arw">&rarr;</span>
+              </a>
+              <a
+                href={`https://outlook.live.com/mail/0/deeplink/compose?to=${EMAIL}&subject=Getting+in+touch`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-ghost"
+              >
+                Open in Outlook <span className="arw">&rarr;</span>
+              </a>
+              <a
+                href={`mailto:${EMAIL}?subject=Getting%20in%20touch`}
+                className="btn btn-ghost"
+              >
+                Open in Apple Mail <span className="arw">&rarr;</span>
+              </a>
+            </div>
           </div>
 
         </div>
